@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hemanth Thammineni</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+  </style>
+</head>
+
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+	  body {
+  	background-color: #E1E7E0;
+  	color: #f1f5f9;
+  	line-height: 1.6;
+	}
+    header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #E1E7E0; /* or whatever your navbar color is */
+  z-index: 1000;
+}
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #2F6D80;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      header .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      nav a {
+        color: #fff;
+        margin-left: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #37BEB0;
+      }
+
+      /* --- HOME SECTION --- */
+
+      .hero {
+        padding: 80px 50px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E1E7E0;
+        
+      }
+
+      .hero-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+        
+      }
+
+      .hero-left {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 250px;
+        margin-top: 30px;
+      }
+
+    .hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 450px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+  /* box-shadow: 0 0 20px #f6b80c; */
+  /* background-color: #0c1122; Matches your dark theme */
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  object-fit: contain; /* Ensures no cropping or stretching */
+}
+
+
+      .hero-right img:hover {
+        transform: scale(1.05);
+      }
+
+      .hello-text {
+        letter-spacing: 3px;
+        color: #2B4560;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #2B4560;
+        margin: 20px 0 10px;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      .typewriter {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  height: 30px;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+}
+
+.type-text::before {
+  content: "";
+  animation: typing 14s steps(20) infinite;
+  color: #000;
+}
+
+@keyframes typing {
+  0%   { content: ""; }
+  5%   { content: "D"; }
+  10%  { content: "Da"; }
+  15%  { content: "Dat"; }
+  20%  { content: "Data"; }
+  25%  { content: "Data "; }
+  30%  { content: "Data A"; }
+  35%  { content: "Data An"; }
+  40%  { content: "Data Ana"; }
+  45%  { content: "Data Anal"; }
+  50%  { content: "Data Analy"; }
+  55%  { content: "Data Analys"; }
+  60%  { content: "Data Analyst"; }
+  65%  { content: "Data Analyst"; } /* pause */
+  70%  { content: ""; }             /* clear */
+  75%  { content: "A"; }
+  78%  { content: "AI"; }
+  81%  { content: "AIM"; }
+  84%  { content: "AIML"; }
+  87%  { content: "AIML "; }
+  90%  { content: "AIML E"; }
+  92%  { content: "AIML En"; }
+  94%  { content: "AIML Eng"; }
+  96%  { content: "AIML Engi"; }
+  98%  { content: "AIML Engin"; }
+  99%  { content: "AIML Engine"; }
+  100% { content: "AIML Engineer"; }
+}
+
+
+      .hero-buttons a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .btn-yellow {
+        background-color: #2B4560;
+        color: #fff;
+      }
+
+      .btn-yellow:hover {
+        background-color: #2F6D80;
+      }
+
+      .btn-outline {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+
+      .btn-outline:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      @media screen and (max-width: 768px) {
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-right {
+          margin-top: 20px;
+        }
+      }
+      .about {
+  background: #E1E7E0;
+  padding: 60px 60px;
+}
+
+.about-right {
+  background-color: #2B4560 ;
+  padding: 30px;
+  border-radius: 12px;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 1300px;
+  margin: auto;
+  text-align: justify;
+  
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2B4560;
+  
+}
+
+.about-right p {
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+
+
+
+.education {
+  background-color: #E1E7E0;
+  padding: 80px 50px;
+  color: #fff;
+}
+
+.education-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.education h2 {
+  font-size: 2rem;
+  color: #2B4560;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about h2{
+  font-size: 2rem;
+  color: #2B4560;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.edu-card {
+  background-color: #2B4560;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 12px rgba(255, 189, 57, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
+}
+
+.edu-card h3 {
+  font-size: 28px;
+  color: #F3EAC0;
+  margin-bottom: 8px;
+}
+
+.edu-school {
+  font-size: 20px;
+  color: #F3EAC0;
+  margin-bottom: 5px;
+
+}
+
+.edu-date {
+  font-size: 20px;
+  color: #F3EAC0;
+  margin-bottom: 15px;
+}
+
+.edu-desc {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  
+}
+
+/* --- EXPERIENCE SECTION (FINAL REFINED) --- */
+.experience {
+  background-color: #E1E7E0;
+  padding: 80px 50px;
+  color: #fff;
+}
+
+.experience-container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.experience h2 {
+  font-size: 2.2rem;
+  color: #2B4560;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.exp-card {
+  background-color: #E1E7E0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 189, 57, 0.15);
+  transition: all 0.3s ease;
+  margin-bottom: 35px;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 189, 57, 0.3);
+}
+
+.exp-card h3 {
+  font-size: 1.6rem;
+  color: #2B4560;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.exp-company {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 4px;
+}
+
+.exp-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.exp-desc {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.exp-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.exp-list li {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.project-card-custom {
+  background-color: #1e293b;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(255, 189, 57, 0.2);
+  border: 1px solid rgba(255, 189, 57, 0.35);
+  color: #e2e8f0;
+}
+
+.project-card-custom h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.project-subtitle {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: #334155;
+  color: #37BEB0;
+  padding: 6px 12px;
+  margin-right: 8px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.github-link {
+  color: #37BEB0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #ffffff;
+}
+
+.projects {
+  background-color: #E1E7E0;
+  padding: 80px 50px;
+  color: #fff;
+}
+
+.projects-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #2B4560;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background-color: #E1E7E0;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-left: 5px solid #2B4560;
+  box-shadow: 0 0 10px rgba(255, 189, 57, 0.2);
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #F3EAC0;
+  margin-bottom: 5px;
+}
+
+.project-subtitle {
+  font-size: 20px;
+  color: #F3EAC0;
+  margin-bottom: 15px;
+}
+
+.project-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.project-card ul li {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.github-link {
+  display: inline-block;
+  color: #F3EAC0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    padding: 20px;
+  }
+
+  .projects h2 {
+    font-size: 1.7rem;
+  }
+}
+
+.project-thumb {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #F3EAC0;
+  color: #2B4560;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+.certifications-container {
+  padding: 40px 20px;
+  background-color: #E1E7E0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background-color: #2B4560; /* Darker than container for contrast */
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  color: #f8fafc;
+  width: 45%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+#certifications h2 {
+  width: 100%;
+  text-align: center;
+  color: #2B4560;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.cert-card h3 {
+  color: #F3EAC0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.cert-card p {
+  color: #fff;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.cert-card a {
+  display: inline-block;
+  color: #2B4560;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cert-card a:hover {
+  text-decoration: underline;
+}
+
+.cert-tag {
+  display: inline-block;
+  background-color: #222;
+  color: #F3EAC0;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  margin-top: 12px;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2B4560;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cert-card {
+    width: 100%;
+  }
+}
+
+
+.contact-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #E1E7E0;
+}
+
+.contact-section h2 {
+  color: #2B4560;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  color: #2F6D80;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Box styling */
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-color: #2F6D80;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #2B4560;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  color: #2B4560;
+}
+
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-...your-integrity-key..." crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-...your-integrity-key..." crossorigin="anonymous"></script>
+
+    <!-- NAVBAR -->
+<!-- <header>
+  
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header> -->
+
+<header style="display: flex; justify-content: space-between; align-items: center;">
+  
+  <!-- Navigation Links on the Left -->
+  <nav>
+    <a href="#home" style="margin-right: 15px;">Home</a>
+    <a href="#about" style="margin-right: 15px;">About</a>
+    <a href="#experience" style="margin-right: 15px;">Experience</a>
+    <a href="#projects" style="margin-right: 15px;">Projects</a>
+    <a href="#certifications" style="margin-right: 15px;">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Icons on the Right -->
+  <div>
+    <a href="https://github.com/ThammineniHemanthChowdary" target="_blank" style="margin-left: 15px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="24" />
+    </a>
+    <a href="https://www.linkedin.com/in/hemanthchowdarythammineni/" target="_blank" style="margin-left: 15px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="24" />
+    </a>
+    <a href="mailto:hemanthchowdary1781@gmail.com" style="margin-left: 15px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email" width="24" />
+    </a>
+  </div>
+
+</header>
+
+
+<!-- HOME SECTION -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-left">
+      <p class="hello-text">HELLO!</p>
+      <h1>I'm Hemanth Thammineni</h1>
+      <h2 class="type-text"></h2>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-yellow">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <div class="profile-pic">
+        <img src="img/profile.jpeg" alt="Hemanth Thammineni">
+      </div>
+    </div>
+  </div>
+</section>
+
+	<!-- ABOUT SECTION -->
+  
+   <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-right">
+    
+  <p>
+    I’m Hemanth, a data professional who loves taking fuzzy problems and turning them into clear, shipped solutions. 
+    I work across the full lifecycle—partnering with stakeholders to frame the right questions, exploring and modeling data with Python and SQL, and building robust ETL with Spark and dbt. 
+    I care about reliability as much as insight: version‑controlled code, documented assumptions, data tests that catch edge cases, and pipelines that run quietly in the background. 
+    On the analytics side, I distill complex findings into decision‑ready stories in Power BI/Tableau; on the ML side, I move from feature engineering and classical models to production with MLflow, containers, and CI/CD on AWS/Snowflake.
+  </p>
+
+  <p>
+    What motivates me is measurable impact and momentum. 
+    I like reducing a weekly manual report to a scheduled job, cutting query time with a smarter model, or simplifying a messy dashboard into something leaders can trust at a glance. 
+    My approach blends curiosity and rigor—clean schemas, tuned queries, clear metrics, and guardrails for data quality and governance. 
+    I’m most at home where collaboration and iteration matter: shipping small, learning fast, and improving continuously. 
+    If you value clarity, speed, and results, we’ll work well together.
+</p>
+
+</div>
+</section>
+
+
+
+<!-- EDUCATION SECTION -->
+<section class="education" id="education">
+  <div class="education-container">
+    <h2>Education</h2>
+
+    <!-- Syracuse University -->
+    <div class="edu-card" data-aos="fade-up">
+      <h3>M.S. Applied Data Science</h3>
+      <p class="edu-school">Syracuse University, School of Information Studies</p>
+      <p class="edu-date">Aug 2023 – May 2025</p>
+      <p class="edu-desc">
+        I have completed my Master’s in Applied Data Science at Syracuse University, where I developed strong foundations in data engineering, machine learning, and business analytics.<br>
+        <strong style="color: #F3EAC0;">GPA:</strong> 3.7 / 4.0<br><br>
+        <strong style="color: #F3EAC0;">Relevant Coursework:</strong> Database Management Systems, Data Science Fundamentals, Scripting for Data Analysis, Applied Machine Learning, Quantitative Reasoning, Business Analytics, Data Warehousing, Cloud Management, Big Data Analytics.<br><br>
+        <strong style="color: #F3EAC0;">Course Highlights & Practical Experience:</strong> During my time at Syracuse, I collaborated on multiple team projects involving real-world datasets, implemented full data pipelines using Python, SQL, and dbt Cloud, and leveraged cloud platforms like AWS and Snowflake for scalable analytics. I gained practical experience in visualizing insights using Tableau and Power BI, and applied various machine learning techniques to solve classification and time series problems relevant to finance and energy sectors. These hands-on experiences helped strengthen my problem-solving skills and deepened my understanding of applied data science in enterprise settings.
+      </p>
+    </div>
+
+    <!-- VTU -->
+    <div class="edu-card" data-aos="fade-up">
+      <h3>B.E. Computer Science & Engineering</h3>
+      <p class="edu-school">Visvesvaraya Technological University, India</p>
+      <p class="edu-date">Jul 2018 – May 2022</p>
+      <p class="edu-desc">
+        I completed my Bachelor's in Computer Science and Engineering at Visvesvaraya Technological University, where I gained hands-on experience in core software development and AI concepts.<br>
+        <strong style="color: #F3EAC0;">GPA:</strong> 7.01 / 10.0<br><br>
+        <strong style="color: #F3EAC0;">Relevant Coursework:</strong> Object-Oriented Programming, Artificial Intelligence, Data Structures and Algorithms, Internet of Things, Big Data Analysis, Operating Systems, AI & ML, Natural Language Processing.<br><br>
+        <strong style="color: #F3EAC0;">Course Highlights & Practical Experience:</strong> As part of my undergraduate curriculum, I developed multiple academic and capstone projects using Java, Python, and cloud APIs. I explored IoT-based home automation systems, built data mining algorithms from scratch, and led a final-year project that used natural language processing to extract sentiment from product reviews. These projects not only improved my coding skills but also sparked my passion for data-driven problem-solving.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="education" id="experience">
+  <div class="education-container">
+    <h2>Experience</h2>
+
+    <div class="edu-card" data-aos="fade-up">
+      <h3>Data Analyst</h3>
+      <p class="edu-school">Genesis Software Solution Inc — Hyderabad, India</p>
+      <p class="edu-date">Jul 2022 – Apr 2023</p>
+      <p class="edu-desc" style="color: #fff;">
+        <ul class="exp-list" >
+          <li>Worked in the financial analytics domain, supporting investment trend analysis and client portfolio reporting by engineering high-quality datasets using Python and PySpark, resulting in a 25% improvement in downstream model performance.</li>
+          <li>Conducted exploratory data analysis (EDA) using R (ggplot2, dplyr) to reveal customer segmentation patterns and reduce preprocessing time by 30%.</li>
+          <li>Developed regression and classification models to forecast revenue and predict risk factors, helping decision-makers reduce churn and optimize marketing spend.</li>
+          <li>Designed and automated ETL pipelines using Python and dbt, increasing data refresh speed and reliability for BI reports used in financial dashboards.</li>
+          <li>Built Power BI dashboards to monitor financial KPIs, improving stakeholder access to performance metrics and enhancing operational transparency.</li>
+          <li>Collaborated with cross-functional teams including financial analysts and business managers to define requirements and deliver impactful insights for strategic planning.</li>
+          <li>Maintained detailed documentation of processes, models, and data flows to support reproducibility, governance, and audit readiness.</li>
+        </ul>
+    </div></div>
+</section>
+	
+	<!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <div class="projects-container">
+      <h2 style="font-size: 28px;">Projects</h2>
+  
+      <!-- Project 1 -->
+      <div class="container my-5" >
+        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
+          <div class="row mb-3">
+            <div class="col-12">
+              <h3>NYPD Crime Hotspots Prediction & Emergency Response Optimization</h3>
+              <p class="project-subtitle">Tools: Python, Pandas, Scikit-learn, XGBoost, ARIMA, LSTM, NYC 911 ICAD, NOAA Weather</p>
+            </div>
+          </div>
+  
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <img src="img/p_1.1.png" alt="NYPD Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_1.2.png" alt="NYPD Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_1.3.png" alt="NYPD Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <li>Analyzed 7M+ 911 dispatch records with weather data to forecast crime-prone areas and optimize emergency response.</li>
+                <li>Built Decision Tree, Random Forest, ARIMA, and LSTM models to predict response time and crime patterns.</li>
+                <li>Identified borough trends: Manhattan had 5-min faster responses; assaults had 10% longer delays.</li>
+                <li>Recommended real-time data integration and fairness audits across precincts.</li>
+              </ul>
+              <div class="project-tags mb-2">
+                <span class="tag">Time Series</span>
+                <span class="tag">ML</span>
+                <span class="tag">LSTM</span>
+              </div>
+              <a href="https://github.com/ThammineniHemanthChowdary/NYPD_ResponseTimeAnalysis" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="container my-5">
+        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
+          <div class="row mb-3">
+            <div class="col-12">
+              <h3>What, How, New York Drives? – DMV & EV Data Visualization</h3>
+              <p class="project-subtitle">Tools: Tableau, Pandas, Mapbox, NY DMV, Crash & EV Infrastructure Data</p>
+            </div>
+          </div>
+  
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <img src="img/p_2.1.png" alt="DMV Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_2.2.png" alt="DMV Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_2.3.png" alt="DMV Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <li>Visualized 8.8M DMV transactions and 3.26M crash records to uncover car trends, crash risks, and EV adoption.</li>
+                <li>Built 3 interactive Tableau dashboards showing vehicle usage, gender-wise crash risks, and EV growth.</li>
+                <li>Found Sunday and afternoon crashes highest; Tesla most popular EV; NYC leads EV infrastructure.</li>
+                <li>Proposed machine learning for crash prediction and sustainable transport planning.</li>
+              </ul>
+              <div class="project-tags mb-2">
+                <span class="tag">Visualization</span>
+                <span class="tag">Geospatial</span>
+                <span class="tag">Tableau</span>
+              </div>
+              <a href="https://github.com/ThammineniHemanthChowdary/What-How-New-York-Drives-" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="container my-5">
+        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
+          <div class="row mb-3">
+            <div class="col-12">
+              <h3>Energy Consumption Forecasting for Peak Demand Optimization</h3>
+              <p class="project-subtitle">Tools: R, Python, XGBoost, Shiny, ggplot2, SHAP, SC/NC Utility Data</p>
+            </div>
+          </div>
+  
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <img src="img/p_3.1.png" alt="Energy Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_3.2.png" alt="Energy Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_3.3.png" alt="Energy Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <li>Forecasted energy usage across SC/NC using 175K+ rows of hourly data, weather, and building profiles.</li>
+                <li>XGBoost (tuned) achieved 88.58% R²; SHAP explained temperature and insulation as top drivers.</li>
+                <li>Built a Shiny dashboard to visualize county-wise usage and simulate demand rise under 5°F temp increase.</li>
+                <li>Suggested demand response strategies like smart pricing and retrofitting to reduce future peak load.</li>
+              </ul>
+              <div class="project-tags mb-2">
+                <span class="tag">Regression</span>
+                <span class="tag">Energy</span>
+                <span class="tag">SHAP</span>
+              </div>
+              <a href="https://github.com/ThammineniHemanthChowdary/Optimizing-Electricity-Demand-for-eSC" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="container my-5">
+        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
+          <div class="row mb-3">
+            <div class="col-12">
+              <h3>Apple Stock Price Prediction Using Historical & Market Data</h3>
+              <p class="project-subtitle">Tools: PySpark, Scikit-learn, Yahoo Finance API, VIX, Bond Yield</p>
+            </div>
+          </div>
+  
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <img src="img/p_4.1.png" alt="Stock Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_4.2.png" alt="Stock Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="col-md-4">
+              <img src="img/p_4.3.jpg" alt="Stock Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <li>Built ML pipeline to forecast Apple’s stock using 10+ years of price and macroeconomic data.</li>
+                <li>Engineered features like daily returns, lags, weekday encodings; addressed non-stationarity via diffing.</li>
+                <li>Best RMSE: 0.384 (Linear Regression); captured volatility patterns, especially 2022 downward trend.</li>
+                <li>Insights aid individual and institutional investors for risk forecasting and strategic decisions.</li>
+              </ul>
+              <div class="project-tags mb-2">
+                <span class="tag">Stock</span>
+                <span class="tag">PySpark</span>
+                <span class="tag">Finance</span>
+              </div>
+              <a href="https://github.com/ThammineniHemanthChowdary/Apple-stock-prediction-" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- AOS animation script -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<!-- CERTIFICATIONS SECTION -->
+<section class="certifications" id="certifications">
+  <div class="certifications-container">
+    <h2>Certifications</h2>
+
+    <!-- Certificate 1 -->
+    <div class="cert-card" data-aos="fade-up">
+  <h3>Snowflake Hands-On Essentials: Data Warehousing Workshop</h3>
+  <p><strong>Issued by:</strong> Snowflake | <strong>Date:</strong> Feb 2025</p>
+  <p>This interactive workshop proves your skills in Snowflake SQL, databases, external stages, and compute warehouses. You demonstrated data loading, transformation, and querying using Snowflake best practices.</p>
+  
+  <span class="cert-tag">Snowflake</span>
+  <span class="cert-tag">SQL</span>
+  <span class="cert-tag">Cloud Warehousing</span>
+
+  
+  </a>
+</div>
+
+
+    <!-- Certificate 2 -->
+<div class="cert-card" data-aos="fade-up">
+  <h3>Career Essentials in Data Analysis</h3>
+  <p><strong>Issued by:</strong> Microsoft & LinkedIn | <strong>Date:</strong> Jun 2024</p>
+  <p>Covered the full lifecycle of data analysis, including Excel, Power BI, and foundational analytics concepts. Helped strengthen your skills in extracting, visualizing, and communicating data insights.</p>
+  
+  <span class="cert-tag">Data Analytics</span>
+  <span class="cert-tag">Visualization</span>
+
+  </a>
+</div>
+
+
+    <!-- Certificate 3 -->
+    <div class="cert-card" data-aos="fade-up">
+      <h3>Data Science and Machine Learning</h3>
+      <p><strong>Issued by:</strong> Udemy | <strong>Date:</strong> May 2023</p>
+      <p>Completed hands-on projects covering supervised/unsupervised learning, regression models, and tools like pandas, numpy, and scikit-learn. Shows commitment to advancing your machine learning expertise.</p>
+      <span class="cert-tag">ML</span>
+      <span class="cert-tag">Python</span>
+      <span class="cert-tag">Scikit-learn</span>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="cert-card" data-aos="fade-up">
+      <h3>Machine Learning Certification</h3>
+      <p><strong>Issued by:</strong> Prinston Smart Engineers | <strong>Date:</strong> Sep 2021</p>
+      <p>Introduced core machine learning principles with practical exposure. Helped build foundational understanding of models and evaluation methods.</p>
+      <span class="cert-tag">Machine Learning</span>
+    </div>
+
+    <!-- Certificate 5 -->
+    <div class="cert-card" data-aos="fade-up">
+      <h3>Web Application Development</h3>
+      <p><strong>Issued by:</strong> Manac Infotech Pvt. Ltd. | <strong>Date:</strong> Jun 2021</p>
+      <p>Explored basic front-end and back-end development tools, including HTML, CSS, JS, and database integration. Demonstrates your flexibility in full-stack foundations.</p>
+      <span class="cert-tag">Web Dev</span>
+      <span class="cert-tag">Frontend</span>
+      <span class="cert-tag">JavaScript</span>
+    </div>
+  </div>
+</section>
+
+	<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+
+  <div class="contact-box">
+    <a href="mailto:hemanthchowdary1781@gmail.com" class="contact-item" title="Email">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <a href="tel:+13152549515" class="contact-item" title="Phone">
+      <i class="fas fa-phone-alt"></i>
+      <span>Phone</span>
+    </a>
+    <a href="https://github.com/ThammineniHemanthChowdary" target="_blank" class="contact-item" title="GitHub">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </a>
+    <a href="https://www.linkedin.com/in/hemanthchowdarythammineni/" target="_blank" class="contact-item" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+  </div>
+</section>
+
+
+
+
+  </body>
+</html>
+
