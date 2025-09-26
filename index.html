@@ -341,79 +341,48 @@
 }
 
 /* --- EXPERIENCE SECTION (FINAL REFINED) --- */
-.experience {
-  background-color: #E1E7E0;
-  padding: 80px 50px;
-  color: #fff;
-}
-
-.experience-container {
-  max-width: 1500px;
-  margin: auto;
-}
-
-.experience h2 {
-  font-size: 2.2rem;
-  color: #2B4560;
-  text-align: center;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.exp-card {
-  background-color: #E1E7E0;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 189, 57, 0.15);
-  transition: all 0.3s ease;
-  margin-bottom: 35px;
-}
-
-.exp-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 189, 57, 0.3);
-}
-
-.exp-card h3 {
+/* --- New Experience styles --- */
+.exp-role {
   font-size: 1.6rem;
   color: #2B4560;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
-.exp-company {
-  font-size: 1rem;
-  color: #bbb;
-  margin-bottom: 4px;
+.exp-meta {
+  font-size: 20px;
+  color: #F3EAC0;
+  margin-bottom: 6px;
 }
 
-.exp-date {
-  font-size: 0.9rem;
-  color: #888;
+.exp-dates {
+  font-size: 20px;
+  color: #F3EAC0;
   margin-bottom: 15px;
 }
 
-.exp-desc {
-  color: #000;
-  font-size: 20px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.exp-list {
+.exp-points {
   list-style: disc;
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.exp-list li {
-  margin-bottom: 10px;
+  padding-left: 22px;
   color: #fff;
   font-size: 20px;
   line-height: 1.6;
 }
+
+.exp-card-new {
+  background-color: #2B4560;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 12px rgba(255, 189, 57, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
+}
+
 .project-card-custom {
   background-color: #1e293b;
   border-radius: 20px;
@@ -828,22 +797,40 @@
   <div class="education-container">
     <h2>Experience</h2>
 
-    <div class="edu-card" data-aos="fade-up">
-      <h3>Data Analyst</h3>
-      <p class="edu-school">Genesis Software Solution Inc — Hyderabad, India</p>
-      <p class="edu-date">Jul 2022 – Apr 2023</p>
-      <p class="edu-desc" style="color: #fff;">
-        <ul class="exp-list" >
-          <li>Worked in the financial analytics domain, supporting investment trend analysis and client portfolio reporting by engineering high-quality datasets using Python and PySpark, resulting in a 25% improvement in downstream model performance.</li>
-          <li>Conducted exploratory data analysis (EDA) using R (ggplot2, dplyr) to reveal customer segmentation patterns and reduce preprocessing time by 30%.</li>
-          <li>Developed regression and classification models to forecast revenue and predict risk factors, helping decision-makers reduce churn and optimize marketing spend.</li>
-          <li>Designed and automated ETL pipelines using Python and dbt, increasing data refresh speed and reliability for BI reports used in financial dashboards.</li>
-          <li>Built Power BI dashboards to monitor financial KPIs, improving stakeholder access to performance metrics and enhancing operational transparency.</li>
-          <li>Collaborated with cross-functional teams including financial analysts and business managers to define requirements and deliver impactful insights for strategic planning.</li>
-          <li>Maintained detailed documentation of processes, models, and data flows to support reproducibility, governance, and audit readiness.</li>
-        </ul>
-    </div></div>
+    <!-- Capital One -->
+    <div class="exp-card-new" data-aos="fade-up">
+      <h3 class="exp-role">AI/ML Engineer</h3>
+      <p class="exp-meta">Capital One — USA</p>
+      <p class="exp-dates">Dec 2024 – Present</p>
+      <ul class="exp-points">
+        <li>Converted a prototype fraud detection model into a production-ready solution using Python, Spark MLlib, and TensorFlow, achieving sub-100 ms response times for real-time transaction scoring.</li>
+        <li>Built and optimized streaming pipelines with Apache Kafka and batch ETL on AWS (S3, EMR, Lambda, SageMaker) to deliver high-quality data for credit risk and fraud models.</li>
+        <li>Established monitoring with Prometheus, Grafana, and CloudWatch to track drift, performance, and data quality, reducing production errors by 45% and strengthening observability.</li>
+        <li>Applied explainable AI (SHAP, LIME) and fairness checks to ensure compliance with financial regulations and to provide transparent model decisioning for sensitive use cases.</li>
+        <li>Implemented CI/CD workflows for ML using Docker and GitHub pipelines, tightening model validation and automated unit testing while accelerating deployments.</li>
+        <li>Researched and piloted transformers, Visual LLMs, and Graph ML to uncover hidden transaction patterns and enhance fraud detection with multi-modal insights.</li>
+      </ul>
+    </div>
+
+    <!-- Hexaware Technologies -->
+    <div class="exp-card-new" data-aos="fade-up">
+      <h3 class="exp-role">AI/ML Engineer</h3>
+      <p class="exp-meta">Hexaware Technologies — India</p>
+      <p class="exp-dates">Jan 2021 – Jul 2023</p>
+      <ul class="exp-points">
+        <li>Developed regression and classification models using scikit-learn, TensorFlow, and PyTorch, improving predictive accuracy and reducing error rates across client projects.</li>
+        <li>Executed data preprocessing, feature engineering, and quality validation on large datasets with PySpark and SQL, accelerating training workflows and minimizing manual effort.</li>
+        <li>Containerized and deployed ML services on AWS and Azure with Docker and CI/CD, enabling scalable API-based inference for production use cases.</li>
+        <li>Worked with data scientists, engineers, and product managers in Agile sprints to align ML solutions with business needs and compliance standards.</li>
+        <li>Evaluated performance via precision, recall, AUC, and drift detection; led root-cause error analysis to guide iterative improvements and strengthen monitoring.</li>
+        <li>Documented experiments, workflows, and deployment steps to ensure reproducibility and seamless hand-offs across global teams.</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
+
+
 	
 	<!-- PROJECTS SECTION -->
   <section class="projects" id="projects">
