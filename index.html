@@ -6,14 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Hemanth Chowdary Thammineni — Data Engineer specializing in Matillion ETL/DPC, Snowflake, Python, SQL, and enterprise data pipelines.">
   <meta name="theme-color" content="#2B4560">
+
   <title>Hemanth Chowdary Thammineni | Data Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+
+    /* ---------- COLOR THEME ---------- */
+
     :root {
       --background: #E1E7E0;
       --navy: #2B4560;
@@ -47,7 +53,8 @@
       color: inherit;
     }
 
-    a:focus-visible, button:focus-visible {
+    a:focus-visible,
+    button:focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 4px;
     }
@@ -144,7 +151,7 @@
       font-weight: 600;
     }
 
-    /* ---------- Navigation ---------- */
+    /* ---------- NAVIGATION ---------- */
 
     .site-header {
       position: sticky;
@@ -207,7 +214,7 @@
       color: var(--cream);
     }
 
-    /* ---------- Home / Hero ---------- */
+    /* ---------- HOME SECTION ---------- */
 
     .hero {
       min-height: min(670px, 90vh);
@@ -307,7 +314,7 @@
       display: none;
     }
 
-    /* ---------- About and Skills ---------- */
+    /* ---------- ABOUT SECTION ---------- */
 
     .about-card {
       font-size: 1rem;
@@ -317,6 +324,8 @@
       margin-top: 14px;
     }
 
+    /* ---------- TECHNICAL SKILLS ---------- */
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -325,6 +334,7 @@
 
     .skill-card {
       padding: 24px;
+      background: var(--navy);
     }
 
     .skill-card h3 {
@@ -335,24 +345,84 @@
       margin: 8px 0 0;
     }
 
+    /*
+      All four Technical Skills cards
+      have the SAME dark-blue background.
+    */
+
     .skill-card.exposure {
-      background: var(--blue);
+      background: var(--navy);
     }
 
-    /* ---------- Education and Experience ---------- */
+    /* ---------- EDUCATION SECTION ---------- */
 
-    .edu-list, .exp-list {
+    .education {
+      background-color: #E1E7E0;
+      padding: 80px 50px;
+      color: #fff;
+    }
+
+    .education-container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .education h2 {
+      font-size: 2rem;
+      color: #2B4560;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .edu-card {
+      background-color: #2B4560;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+      transition: transform .3s ease,
+                  box-shadow .3s ease;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    }
+
+    .edu-card h3 {
+      font-size: 28px;
+      color: #F3EAC0;
+      margin-bottom: 8px;
+    }
+
+    .edu-school {
+      font-size: 20px;
+      color: #F3EAC0;
+      margin-bottom: 5px;
+    }
+
+    .edu-date {
+      font-size: 20px;
+      color: #F3EAC0;
+      margin-bottom: 15px;
+    }
+
+    .edu-desc {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    /* ---------- WORK EXPERIENCE ---------- */
+
+    .exp-list {
       display: grid;
       gap: 20px;
     }
 
-    .edu-card .meta, .exp-card .meta {
+    .exp-card .meta {
       display: block;
       margin: 4px 0 14px;
-    }
-
-    .edu-card p:last-child {
-      margin-bottom: 0;
     }
 
     .exp-card .client {
@@ -360,7 +430,7 @@
       font-weight: 500;
     }
 
-    /* ---------- Projects ---------- */
+    /* ---------- PROJECTS SECTION ---------- */
 
     .project-list {
       display: grid;
@@ -432,11 +502,12 @@
       color: var(--accent);
     }
 
-    .project-card p, .project-card li {
+    .project-card p,
+    .project-card li {
       font-size: .97rem;
     }
 
-    /* ---------- Certifications and Contact ---------- */
+    /* ---------- CERTIFICATIONS ---------- */
 
     .cert-grid {
       display: grid;
@@ -453,6 +524,8 @@
     .cert-card p {
       margin-bottom: 8px;
     }
+
+    /* ---------- CONTACT SECTION ---------- */
 
     .contact-card {
       max-width: 1000px;
@@ -495,9 +568,10 @@
       font-size: .85rem;
     }
 
-    /* ---------- Responsive Design ---------- */
+    /* ---------- RESPONSIVE DESIGN ---------- */
 
     @media (max-width: 1050px) {
+
       .nav-wrap {
         flex-wrap: wrap;
         padding: 12px 0;
@@ -522,6 +596,7 @@
     }
 
     @media (max-width: 760px) {
+
       html {
         scroll-padding-top: 130px;
       }
@@ -532,6 +607,24 @@
 
       section {
         padding: 50px 0;
+      }
+
+      .education {
+        padding: 50px 20px;
+      }
+
+      .edu-card {
+        padding: 20px;
+      }
+
+      .edu-card h3 {
+        font-size: 23px;
+      }
+
+      .edu-school,
+      .edu-date,
+      .edu-desc {
+        font-size: 16px;
       }
 
       .nav-wrap {
@@ -571,7 +664,9 @@
         max-width: 310px;
       }
 
-      .skills-grid, .cert-grid, .contact-grid {
+      .skills-grid,
+      .cert-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -585,6 +680,7 @@
     }
 
     @media (max-width: 480px) {
+
       .social-links {
         right: 14px;
         top: 16px;
@@ -610,6 +706,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       html {
         scroll-behavior: auto;
       }
@@ -619,21 +716,28 @@
         animation-duration: .01ms !important;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
 
-  <!-- ---------- Navigation ---------- -->
+  <!-- ---------- NAVIGATION ---------- -->
 
   <header class="site-header">
+
     <div class="container nav-wrap">
 
-      <a class="brand" href="#home">Hemanth Thammineni</a>
+      <a class="brand" href="#home">
+        Hemanth Thammineni
+      </a>
 
       <nav class="main-nav" aria-label="Main navigation">
+
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -642,6 +746,7 @@
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
+
       </nav>
 
       <div class="social-links" aria-label="Social profiles">
@@ -669,39 +774,48 @@
         </a>
 
       </div>
+
     </div>
   </header>
 
   <main id="main-content">
 
-    <!-- ---------- Home ---------- -->
+    <!-- ---------- HOME SECTION ---------- -->
 
     <section class="hero" id="home">
+
       <div class="container hero-inner">
 
         <div>
+
           <span class="eyebrow">Hello, I'm</span>
 
-          <h1>Hemanth Chowdary<br>Thammineni</h1>
+          <h1>
+            Hemanth Chowdary<br>
+            Thammineni
+          </h1>
 
           <h2>
             <span id="role-text">Data Engineer</span>
           </h2>
 
           <p>
-            Building reliable data pipelines with Matillion ETL/DPC,
-            Snowflake, Python, and SQL. Focused on data quality,
-            performance, and production troubleshooting.
+            Building reliable data pipelines with
+            Matillion ETL/DPC, Snowflake, Python, and SQL.
+            Focused on data quality, performance, and
+            production troubleshooting.
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#projects">Explore Projects</a>
+
+            <a class="btn" href="#projects">
+              Explore Projects
+            </a>
 
             <a class="btn btn-outline" href="#contact">
               Contact Me
             </a>
 
-            <!-- Place your resume PDF beside index.html -->
             <a
               class="btn btn-outline"
               href="Hemanth_Data_Engineer_Resume_Updated.pdf"
@@ -709,22 +823,26 @@
               rel="noopener noreferrer">
               View Resume
             </a>
+
           </div>
         </div>
 
         <div class="portrait">
+
           <img
             src="img/profile.jpeg"
             alt="Portrait of Hemanth Chowdary Thammineni"
             loading="lazy">
+
         </div>
 
       </div>
     </section>
 
-    <!-- ---------- About ---------- -->
+    <!-- ---------- ABOUT SECTION ---------- -->
 
     <section id="about">
+
       <div class="container">
 
         <h2 class="section-title">About Me</h2>
@@ -736,8 +854,10 @@
             developing, migrating, and supporting enterprise
             ETL/ELT pipelines for a healthcare payer client.
             My core stack includes
-            <strong>Matillion ETL, Matillion Data Productivity
-            Cloud (DPC), Snowflake, Python, and SQL</strong>.
+            <strong>
+              Matillion ETL, Matillion Data Productivity
+              Cloud (DPC), Snowflake, Python, and SQL.
+            </strong>
           </p>
 
           <p>
@@ -761,12 +881,14 @@
           </p>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ---------- Technical Skills ---------- -->
+    <!-- ---------- TECHNICAL SKILLS ---------- -->
 
     <section id="skills">
+
       <div class="container">
 
         <h2 class="section-title">Technical Skills</h2>
@@ -774,102 +896,195 @@
         <div class="skills-grid">
 
           <div class="card skill-card">
+
             <h3>Programming &amp; SQL</h3>
+
             <p>
               Python (Pandas, NumPy, Polars),
               SQL (joins, CTEs, window functions),
               Bash, Git
             </p>
+
           </div>
 
           <div class="card skill-card">
+
             <h3>Production Data Engineering</h3>
+
             <p>
-              Matillion ETL, Matillion DPC, Snowflake,
-              ETL/ELT, pipeline migration, batch orchestration,
-              query optimization, job control tables
+              Matillion ETL, Matillion DPC,
+              Snowflake, ETL/ELT, pipeline migration,
+              batch orchestration, query optimization,
+              job control tables
             </p>
+
           </div>
 
           <div class="card skill-card">
+
             <h3>Data Quality &amp; Reporting</h3>
+
             <p>
-              Source-to-target reconciliation, schema validation,
-              null and duplicate checks, pipeline monitoring,
+              Source-to-target reconciliation,
+              schema validation, null and duplicate
+              checks, pipeline monitoring,
               root-cause analysis, Tableau, PostgreSQL
             </p>
+
           </div>
 
           <div class="card skill-card exposure">
+
             <h3>Coursework &amp; Project Exposure</h3>
+
             <p>
-              Spark/PySpark, scikit-learn, XGBoost, SHAP,
-              MLflow, Docker, dbt, Airflow, Azure Data Factory,
+              Spark/PySpark, scikit-learn,
+              XGBoost, SHAP, MLflow, Docker,
+              dbt, Airflow, Azure Data Factory,
               AWS S3, BigQuery, dimensional modeling
             </p>
+
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ---------- Education ---------- -->
+    <!-- ---------- EDUCATION SECTION ---------- -->
+    <!-- Original detailed Education content preserved -->
 
-    <section id="education">
-      <div class="container">
+    <section class="education" id="education">
 
-        <h2 class="section-title">Education</h2>
+      <div class="education-container">
 
-        <div class="edu-list">
+        <h2>Education</h2>
 
-          <article class="card edu-card">
+        <!-- Syracuse University -->
 
-            <h3>
-              Master of Science in Applied Data Science
-            </h3>
+        <div class="edu-card" data-aos="fade-up">
 
-            <span class="meta">
-              Syracuse University · Aug 2023 – May 2025
-            </span>
+          <h3>M.S. Applied Data Science</h3>
 
-            <p>
-              <strong>Relevant Coursework:</strong>
-              Artificial Intelligence &amp; Machine Learning,
-              Big Data Analytics, Data Warehousing,
-              Cloud Management, Database Management Systems,
-              Quantitative Reasoning for Data Science,
-              and Business Analytics.
-            </p>
+          <p class="edu-school">
+            Syracuse University, School of Information Studies
+          </p>
 
-          </article>
+          <p class="edu-date">
+            Aug 2023 – May 2025
+          </p>
 
-          <article class="card edu-card">
+          <p class="edu-desc">
 
-            <h3>
-              Bachelor of Engineering in Computer Science
-              &amp; Engineering
-            </h3>
+            I have completed my Master’s in Applied Data Science
+            at Syracuse University, where I developed strong
+            foundations in data engineering, machine learning,
+            and business analytics.<br>
 
-            <span class="meta">
-              Visvesvaraya Technological University, India ·
-              Jul 2018 – May 2022
-            </span>
+            <strong style="color: #F3EAC0;">
+              GPA:
+            </strong>
+            3.7 / 4.0<br><br>
 
-            <p>
-              Undergraduate studies in computer science,
-              programming, data structures, algorithms,
-              and software development.
-            </p>
+            <strong style="color: #F3EAC0;">
+              Relevant Coursework:
+            </strong>
+            Database Management Systems,
+            Data Science Fundamentals,
+            Scripting for Data Analysis,
+            Applied Machine Learning,
+            Quantitative Reasoning,
+            Business Analytics,
+            Data Warehousing,
+            Cloud Management,
+            Big Data Analytics.<br><br>
 
-          </article>
+            <strong style="color: #F3EAC0;">
+              Course Highlights &amp; Practical Experience:
+            </strong>
+
+            During my time at Syracuse, I collaborated on
+            multiple team projects involving real-world datasets,
+            implemented full data pipelines using Python, SQL,
+            and dbt Cloud, and leveraged cloud platforms like AWS
+            and Snowflake for scalable analytics. I gained practical
+            experience in visualizing insights using Tableau and
+            Power BI, and applied various machine learning techniques
+            to solve classification and time series problems
+            relevant to finance and energy sectors. These hands-on
+            experiences helped strengthen my problem-solving skills
+            and deepened my understanding of applied data science
+            in enterprise settings.
+
+          </p>
 
         </div>
+
+        <!-- VTU -->
+
+        <div class="edu-card" data-aos="fade-up">
+
+          <h3>
+            B.E. Computer Science &amp; Engineering
+          </h3>
+
+          <p class="edu-school">
+            Visvesvaraya Technological University, India
+          </p>
+
+          <p class="edu-date">
+            Jul 2018 – May 2022
+          </p>
+
+          <p class="edu-desc">
+
+            I completed my Bachelor's in Computer Science and
+            Engineering at Visvesvaraya Technological University,
+            where I gained hands-on experience in core software
+            development and AI concepts.<br>
+
+            <strong style="color: #F3EAC0;">
+              GPA:
+            </strong>
+            7.01 / 10.0<br><br>
+
+            <strong style="color: #F3EAC0;">
+              Relevant Coursework:
+            </strong>
+            Object-Oriented Programming,
+            Artificial Intelligence,
+            Data Structures and Algorithms,
+            Internet of Things,
+            Big Data Analysis,
+            Operating Systems,
+            AI &amp; ML,
+            Natural Language Processing.<br><br>
+
+            <strong style="color: #F3EAC0;">
+              Course Highlights &amp; Practical Experience:
+            </strong>
+
+            As part of my undergraduate curriculum, I developed
+            multiple academic and capstone projects using Java,
+            Python, and cloud APIs. I explored IoT-based home
+            automation systems, built data mining algorithms
+            from scratch, and led a final-year project that
+            used natural language processing to extract sentiment
+            from product reviews. These projects not only improved
+            my coding skills but also sparked my passion for
+            data-driven problem-solving.
+
+          </p>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- ---------- Work Experience ---------- -->
+    <!-- ---------- WORK EXPERIENCE ---------- -->
 
     <section id="experience">
+
       <div class="container">
 
         <h2 class="section-title">Work Experience</h2>
@@ -886,7 +1101,9 @@
               CloudEQS LLC · Client: Delta Dental of California
             </p>
 
-            <span class="meta">Nov 2025 – Present</span>
+            <span class="meta">
+              Nov 2025 – Present
+            </span>
 
             <ul>
 
@@ -899,10 +1116,11 @@
               </li>
 
               <li>
-                Contributed to migration of Matillion ETL jobs
-                to DPC across development, QA, and production;
-                refactored components and verified source-to-target
-                consistency through reconciliation checks.
+                Contributed to migration of Matillion ETL
+                jobs to DPC across development, QA, and
+                production; refactored components and verified
+                source-to-target consistency through
+                reconciliation checks.
               </li>
 
               <li>
@@ -973,13 +1191,14 @@
           </article>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ---------- Academic Projects ---------- -->
-    <!-- Keep your existing img/ folder and filenames -->
+    <!-- ---------- ACADEMIC PROJECTS ---------- -->
 
     <section id="projects">
+
       <div class="container">
 
         <h2 class="section-title">Academic Projects</h2>
@@ -992,7 +1211,7 @@
 
         <div class="project-list">
 
-          <!-- Project 1: Energy -->
+          <!-- Project 1: Energy Demand Forecasting -->
 
           <article class="card project-card">
 
@@ -1030,7 +1249,8 @@
             <ul>
 
               <li>
-                Processed <strong>176,948 observations</strong>
+                Processed
+                <strong>176,948 observations</strong>
                 from energy-usage, household, and weather
                 datasets to support peak-demand forecasting.
               </li>
@@ -1063,15 +1283,17 @@
                 href="https://github.com/ThammineniHemanthChowdary/Optimizing-Electricity-Demand-for-eSC"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <i class="fab fa-github"></i>
                 View GitHub Repository
+
               </a>
 
             </div>
 
           </article>
 
-          <!-- Project 2: Stock Forecasting -->
+          <!-- Project 2: Apple Stock Forecasting -->
 
           <article class="card project-card">
 
@@ -1143,15 +1365,17 @@
                 href="https://github.com/ThammineniHemanthChowdary/Apple-stock-prediction-"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <i class="fab fa-github"></i>
                 View GitHub Repository
+
               </a>
 
             </div>
 
           </article>
 
-          <!-- Project 3: New York Transportation -->
+          <!-- Project 3: NY Transportation -->
 
           <article class="card project-card">
 
@@ -1199,8 +1423,8 @@
 
               <li>
                 Built interactive Tableau dashboards covering
-                vehicle registration trends, road safety patterns,
-                and EV adoption across New York State.
+                vehicle registration trends, road safety
+                patterns, and EV adoption across New York State.
               </li>
 
             </ul>
@@ -1218,8 +1442,10 @@
                 href="https://github.com/ThammineniHemanthChowdary/What-How-New-York-Drives-"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <i class="fab fa-github"></i>
                 View GitHub Repository
+
               </a>
 
             </div>
@@ -1267,23 +1493,21 @@
 
               <li>
                 Explored <strong>7.05 million</strong>
-                emergency-call records and analyzed
-                approximately <strong>450,000</strong>
-                focused incidents, incorporating weather
-                and time features.
+                emergency-call records and analyzed approximately
+                <strong>450,000</strong> focused incidents,
+                incorporating weather and time features.
               </li>
 
               <li>
                 Evaluated Decision Tree, Random Forest,
-                and ARIMA models for response-time and
-                hotspot analysis; explored LSTM approaches
+                and ARIMA models for response-time and hotspot
+                analysis; explored LSTM approaches
                 as additional research.
               </li>
 
               <li>
-                Examined response-time differences
-                by incident category, borough,
-                and weather conditions.
+                Examined response-time differences by incident
+                category, borough, and weather conditions.
               </li>
 
             </ul>
@@ -1301,8 +1525,10 @@
                 href="https://github.com/ThammineniHemanthChowdary/NYPD_ResponseTimeAnalysis"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <i class="fab fa-github"></i>
                 View GitHub Repository
+
               </a>
 
             </div>
@@ -1310,17 +1536,21 @@
           </article>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ---------- Certifications ---------- -->
+    <!-- ---------- CERTIFICATIONS ---------- -->
 
     <section id="certifications">
+
       <div class="container">
 
         <h2 class="section-title">Certifications</h2>
 
         <div class="cert-grid">
+
+          <!-- Certification 1 -->
 
           <article class="card cert-card">
 
@@ -1347,6 +1577,8 @@
 
           </article>
 
+          <!-- Certification 2 -->
+
           <article class="card cert-card">
 
             <h3>
@@ -1371,20 +1603,21 @@
           </article>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ---------- Contact ---------- -->
+    <!-- ---------- CONTACT SECTION ---------- -->
 
     <section id="contact">
+
       <div class="container">
 
         <h2 class="section-title">Contact Me</h2>
 
         <p class="section-intro">
-          Interested in collaborating or discussing
-          Data Engineer opportunities? Feel free
-          to reach out.
+          Interested in collaborating or discussing Data Engineer
+          opportunities? Feel free to reach out.
         </p>
 
         <div class="card contact-card">
@@ -1442,24 +1675,27 @@
           </p>
 
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- ---------- Footer ---------- -->
+  <!-- ---------- FOOTER ---------- -->
 
   <footer class="footer">
+
     © <span id="year">2026</span>
     Hemanth Chowdary Thammineni.
     All rights reserved.
+
   </footer>
 
-  <!-- ---------- JavaScript ---------- -->
+  <!-- ---------- JAVASCRIPT ---------- -->
 
   <script>
 
-    // Rotate professional titles.
+    // Rotating job titles
 
     const roles = [
       "Data Engineer",
@@ -1479,18 +1715,19 @@
       window.setInterval(() => {
 
         roleIndex = (roleIndex + 1) % roles.length;
+
         roleNode.textContent = roles[roleIndex];
 
       }, 3000);
 
     }
 
-    // Update footer year automatically.
+    // Update footer year
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Show placeholders for missing local images.
+    // Display placeholders for missing images
 
     document.querySelectorAll(
       ".portrait img, .gallery-item img"
