@@ -1,1122 +1,1520 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hemanth Thammineni</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Hemanth Chowdary Thammineni — Data Engineer specializing in Matillion ETL/DPC, Snowflake, Python, SQL, and enterprise data pipelines.">
+  <meta name="theme-color" content="#2B4560">
+  <title>Hemanth Chowdary Thammineni | Data Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
+    :root {
+      --background: #E1E7E0;
+      --navy: #2B4560;
+      --blue: #2F6D80;
+      --accent: #37BEB0;
+      --cream: #F3EAC0;
+      --white: #FFFFFF;
+      --ink: #21384B;
+      --muted: #4B6272;
+      --shadow: 0 10px 30px rgba(25, 52, 72, 0.13);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: 'Poppins', Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -70px;
+      left: 12px;
+      background: var(--cream);
+      color: var(--navy);
+      z-index: 2000;
+      padding: 9px 16px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.65rem, 2.8vw, 2.2rem);
+      line-height: 1.2;
+      color: var(--navy);
+      margin: 0 0 28px;
+    }
+
+    .section-intro {
+      margin: -12px auto 32px;
+      text-align: center;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 8px;
+      color: var(--blue);
+      letter-spacing: .17em;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .83rem;
+    }
+
+    .card {
+      border-radius: 18px;
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .card h3 {
+      color: var(--cream);
+      margin: 0 0 6px;
+      font-size: 1.3rem;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+    }
+
+    .card ul {
+      padding-left: 21px;
+      margin: 12px 0 0;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--cream);
+      border-radius: 999px;
+      padding: 5px 12px;
+      margin: 6px 6px 0 0;
+      color: var(--navy);
+      font-size: .79rem;
+      font-weight: 600;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 3px 16px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 74px;
+    }
+
+    .brand {
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: var(--white);
+      font-size: .86rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 9px 11px;
+      border-radius: 7px;
+      transition: color .2s, background .2s;
+    }
+
+    .main-nav a:hover {
+      background: rgba(255,255,255,.11);
+      color: var(--cream);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .social-links a {
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    .social-links a:hover {
+      color: var(--cream);
+    }
+
+    /* ---------- Home / Hero ---------- */
+
+    .hero {
+      min-height: min(670px, 90vh);
+      display: flex;
+      align-items: center;
+      padding: 78px 0;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: var(--navy);
+      font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+      line-height: 1.17;
+      margin: 6px 0 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+      margin: 0 0 16px;
+      color: var(--blue);
+      min-height: 1.7em;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 999px;
+      padding: 11px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .btn-outline:hover {
+      color: var(--white);
+    }
+
+    .portrait {
+      width: min(420px, 100%);
+      aspect-ratio: 1 / 1;
+      margin: auto;
+      border-radius: 26px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #2B4560, #2F6D80);
+      box-shadow: var(--shadow);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .portrait:has(img.is-missing)::after {
+      content: "HT";
+      color: var(--cream);
+      font-weight: 700;
+      font-size: 7rem;
+    }
+
+    .portrait img.is-missing {
+      display: none;
+    }
+
+    /* ---------- About and Skills ---------- */
+
+    .about-card {
+      font-size: 1rem;
+    }
+
+    .about-card p + p {
+      margin-top: 14px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.13rem;
+    }
+
+    .skill-card p {
+      margin: 8px 0 0;
+    }
+
+    .skill-card.exposure {
+      background: var(--blue);
+    }
+
+    /* ---------- Education and Experience ---------- */
+
+    .edu-list, .exp-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .edu-card .meta, .exp-card .meta {
+      display: block;
+      margin: 4px 0 14px;
+    }
+
+    .edu-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-card .client {
+      margin: 1px 0 0;
+      font-weight: 500;
+    }
+
+    /* ---------- Projects ---------- */
+
+    .project-list {
+      display: grid;
+      gap: 26px;
+    }
+
+    .project-card h3 {
+      font-size: 1.38rem;
+    }
+
+    .project-subtitle {
+      color: var(--cream);
+      font-size: .92rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin: 18px 0;
+    }
+
+    .gallery-item {
+      height: 170px;
+      border-radius: 12px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #35677a, #1b324e);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: rgba(255,255,255,.06);
+    }
+
+    .gallery-item.is-missing::after {
+      content: "Project visual";
+      color: #dae9e8;
+      opacity: .65;
+      font-size: .85rem;
+      position: absolute;
+    }
+
+    .gallery-item img.is-missing {
+      display: none;
+    }
+
+    .project-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .github-link {
+      color: var(--cream);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .github-link:hover {
+      color: var(--accent);
+    }
+
+    .project-card p, .project-card li {
+      font-size: .97rem;
+    }
+
+    /* ---------- Certifications and Contact ---------- */
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .cert-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .cert-card p {
+      margin-bottom: 8px;
+    }
+
+    .contact-card {
+      max-width: 1000px;
+      margin: auto;
+      padding: 28px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 15px;
+      background: rgba(255,255,255,.08);
+      border-radius: 10px;
+      color: var(--white);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,.17);
+      color: var(--cream);
+    }
+
+    .contact-link i {
+      color: var(--cream);
+      min-width: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 26px 0 34px;
+      font-size: .85rem;
+    }
+
+    /* ---------- Responsive Design ---------- */
+
+    @media (max-width: 1050px) {
+      .nav-wrap {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .social-links {
+        margin-left: auto;
+        position: absolute;
+        right: 24px;
+        top: 20px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 130px;
+      }
+
+      .container {
+        width: min(100% - 30px, 1160px);
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .nav-wrap {
+        gap: 6px;
+      }
+
+      .brand {
+        font-size: 1rem;
+      }
+
+      .main-nav a {
+        font-size: .77rem;
+        padding: 6px 8px;
+      }
+
+      .hero {
+        padding: 48px 0 58px;
+        min-height: auto;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 24px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .portrait {
+        max-width: 310px;
+      }
+
+      .skills-grid, .cert-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        height: 125px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .social-links {
+        right: 14px;
+        top: 16px;
+        gap: 9px;
+      }
+
+      .main-nav a {
+        font-size: .72rem;
+        padding: 5px 6px;
+      }
+
+      .gallery {
+        gap: 6px;
+      }
+
+      .gallery-item {
+        height: 88px;
+      }
+
+      .project-footer {
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
     }
   </style>
 </head>
 
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ---------- Navigation ---------- -->
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="#home">Hemanth Thammineni</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="social-links" aria-label="Social profiles">
+
+        <a
+          href="https://github.com/ThammineniHemanthChowdary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/hemanth-thammineni-56375341a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="mailto:hemanththammineni17@gmail.com"
+          aria-label="Send email">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-      }
-
-	  body {
-  	background-color: #E1E7E0;
-  	color: #f1f5f9;
-  	line-height: 1.6;
-	}
-    header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  background-color: #E1E7E0; /* or whatever your navbar color is */
-  z-index: 1000;
-}
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 50px;
-        background-color: #2F6D80;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      header .logo {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: #fff;
-      }
-
-      nav a {
-        color: #fff;
-        margin-left: 30px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: #37BEB0;
-      }
-
-      /* --- HOME SECTION --- */
-
-      .hero {
-        padding: 80px 50px;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #E1E7E0;
-        
-      }
-
-      .hero-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1200px;
-        
-      }
-
-      .hero-left {
-        flex: 1;
-        min-width: 300px;
-      }
-
-      .hero-right {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 250px;
-        margin-top: 30px;
-      }
-
-    .hero-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-pic {
-  width: 450px;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-  /* box-shadow: 0 0 20px #f6b80c; */
-  /* background-color: #0c1122; Matches your dark theme */
-}
-
-.profile-pic img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-  object-fit: contain; /* Ensures no cropping or stretching */
-}
-
-
-      .hero-right img:hover {
-        transform: scale(1.05);
-      }
-
-      .hello-text {
-        letter-spacing: 3px;
-        color: #2B4560;
-        font-weight: 500;
-        font-size: 1rem;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        color: #2B4560;
-        margin: 20px 0 10px;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-        color: #fff;
-        margin-bottom: 30px;
-      }
-      .typewriter {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-  height: 30px;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-}
-
-.type-text::before {
-  content: "";
-  animation: typing 14s steps(20) infinite;
-  color: #000;
-}
-
-@keyframes typing {
-  0%   { content: ""; }
-  5%   { content: "D"; }
-  10%  { content: "Da"; }
-  15%  { content: "Dat"; }
-  20%  { content: "Data"; }
-  25%  { content: "Data "; }
-  30%  { content: "Data A"; }
-  35%  { content: "Data An"; }
-  40%  { content: "Data Ana"; }
-  45%  { content: "Data Anal"; }
-  50%  { content: "Data Analy"; }
-  55%  { content: "Data Analys"; }
-  60%  { content: "Data Analyst"; }
-  65%  { content: "Data Analyst"; } /* pause */
-  70%  { content: ""; }             /* clear */
-  75%  { content: "D"; }
-  78%  { content: "Da"; }
-  81%  { content: "Dat"; }
-  84%  { content: "Data"; }
-  87%  { content: "Data "; }
-  90%  { content: "Data E"; }
-  92%  { content: "Data En"; }
-  94%  { content: "Data Eng"; }
-  96%  { content: "Data Engi"; }
-  98%  { content: "Data Engin"; }
-  99%  { content: "Data Engine"; }
-  100% { content: "Data Engineer"; }
-}
-
-
-      .hero-buttons a {
-        display: inline-block;
-        margin: 10px;
-        padding: 12px 30px;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background 0.3s, color 0.3s;
-      }
-
-      .btn-yellow {
-        background-color: #2B4560;
-        color: #fff;
-      }
-
-      .btn-yellow:hover {
-        background-color: #2F6D80;
-      }
-
-      .btn-outline {
-        border: 2px solid #fff;
-        color: #fff;
-      }
-
-      .btn-outline:hover {
-        background-color: #fff;
-        color: #000;
-      }
-
-      @media screen and (max-width: 768px) {
-        .hero-container {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .hero-right {
-          margin-top: 20px;
-        }
-      }
-      .about {
-  background: #E1E7E0;
-  padding: 60px 60px;
-}
-
-.about-right {
-  background-color: #2B4560 ;
-  padding: 30px;
-  border-radius: 12px;
-  color: #f1f1f1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  max-width: 1300px;
-  margin: auto;
-  text-align: justify;
-  
-}
-
-.about h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #2B4560;
-  
-}
-
-.about-right p {
-  font-size: 20px;
-  margin-bottom: 18px;
-  color: #fff;
-}
-
-
-#experience .edu-desc { margin: 0; padding: 0; }
-#experience .exp-list { margin-top: 0; }
-
-
-.education {
-  background-color: #E1E7E0;
-  padding: 80px 50px;
-  color: #fff;
-}
-
-.education-container {
-  max-width: 1300px;
-  margin: auto;
-}
-
-.education h2 {
-  font-size: 2rem;
-  color: #2B4560;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.about h2{
-  font-size: 2rem;
-  color: #2B4560;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.edu-card {
-  background-color: #2B4560;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 12px rgba(255, 189, 57, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
-}
-
-.edu-card h3 {
-  font-size: 28px;
-  color: #F3EAC0;
-  margin-bottom: 8px;
-}
-
-.edu-school {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 5px;
-
-}
-
-.edu-date {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 15px;
-}
-
-.edu-desc {
-  color: #fff;
-  font-size: 20px;
-  line-height: 1.6;
-}
-@media screen and (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  
-}
-
-/* --- EXPERIENCE SECTION (FINAL REFINED) --- */
-/* --- New Experience styles --- */
-.exp-role {
-  font-size: 1.6rem;
-  color: #F3EAC0;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.exp-meta {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 6px;
-}
-
-.exp-dates {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 15px;
-}
-
-.exp-points {
-  list-style: disc;
-  padding-left: 22px;
-  color: #fff;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.exp-card-new {
-  background-color: #2B4560;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 12px rgba(255, 189, 57, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.exp-card-new:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
-}
-
-.project-card-custom {
-  background-color: #1e293b;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(255, 189, 57, 0.2);
-  border: 1px solid rgba(255, 189, 57, 0.35);
-  color: #e2e8f0;
-}
-
-.project-card-custom h3 {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.project-subtitle {
-  font-size: 0.95rem;
-  color: #cbd5e1;
-  margin-bottom: 20px;
-}
-
-.tag {
-  background-color: #334155;
-  color: #37BEB0;
-  padding: 6px 12px;
-  margin-right: 8px;
-  font-size: 0.8rem;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.github-link {
-  color: #37BEB0;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.github-link:hover {
-  color: #ffffff;
-}
-
-.projects {
-  background-color: #E1E7E0;
-  padding: 80px 50px;
-  color: #fff;
-}
-
-.projects-container {
-  max-width: 1300px;
-  margin: auto;
-}
-
-.projects h2 {
-  text-align: center;
-  font-size: 28px;
-  color: #2B4560;
-  margin-bottom: 40px;
-}
-
-.project-card {
-  background-color: #E1E7E0;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-left: 5px solid #2B4560;
-  box-shadow: 0 0 10px rgba(255, 189, 57, 0.2);
-}
-
-.project-card h3 {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 5px;
-}
-
-.project-subtitle {
-  font-size: 20px;
-  color: #F3EAC0;
-  margin-bottom: 15px;
-}
-
-.project-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #000;
-  margin-bottom: 15px;
-}
-
-.project-card ul li {
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.github-link {
-  display: inline-block;
-  color: #F3EAC0;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.github-link:hover {
-  color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .project-card {
-    padding: 20px;
-  }
-
-  .projects h2 {
-    font-size: 1.7rem;
-  }
-}
-
-.project-thumb {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.project-tags {
-  margin-top: 10px;
-}
-
-.tag {
-  display: inline-block;
-  background-color: #F3EAC0;
-  color: #2B4560;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin-right: 8px;
-  margin-bottom: 5px;
-}
-.certifications-container {
-  padding: 40px 20px;
-  background-color: #E1E7E0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cert-card {
-  background-color: #2B4560; /* Darker than container for contrast */
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  color: #f8fafc;
-  width: 45%;
-  max-width: 600px;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.cert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
-}
-
-#certifications h2 {
-  width: 100%;
-  text-align: center;
-  color: #2B4560;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.cert-card h3 {
-  color: #F3EAC0;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.cert-card p {
-  color: #fff;
-  margin: 6px 0;
-  line-height: 1.5;
-}
-
-.cert-card a {
-  display: inline-block;
-  color: #2B4560;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.cert-card a:hover {
-  text-decoration: underline;
-}
-
-.cert-tag {
-  display: inline-block;
-  background-color: #222;
-  color: #F3EAC0;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin-right: 8px;
-  margin-top: 12px;
-}
-
-.cert-link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #2B4560;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cert-link:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .cert-card {
-    width: 100%;
-  }
-}
-
-
-.contact-section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #E1E7E0;
-}
-
-.contact-section h2 {
-  color: #2B4560;
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-.contact-section p {
-  color: #2F6D80;
-  margin-bottom: 30px;
-  font-size: 1rem;
-}
-
-/* Box styling */
-.contact-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  background-color: #2F6D80;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Individual item */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.contact-item i {
-  font-size: 1.5rem;
-  color: #2B4560;
-}
-
-.contact-item:hover {
-  transform: translateY(-3px);
-  color: #2B4560;
-}
-
-
-
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-...your-integrity-key..." crossorigin="anonymous">
-
-  </head>
-  <body>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-...your-integrity-key..." crossorigin="anonymous"></script>
-
-    <!-- NAVBAR -->
-<!-- <header>
-  
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header> -->
-
-<header style="display: flex; justify-content: space-between; align-items: center;">
-  
-  <!-- Navigation Links on the Left -->
-  <nav>
-    <a href="#home" style="margin-right: 15px;">Home</a>
-    <a href="#about" style="margin-right: 15px;">About</a>
-    <a href="#experience" style="margin-right: 15px;">Experience</a>
-    <a href="#projects" style="margin-right: 15px;">Projects</a>
-    <a href="#certifications" style="margin-right: 15px;">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Icons on the Right -->
-  <div>
-    <a href="https://github.com/ThammineniHemanthChowdary" target="_blank" style="margin-left: 15px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="24" />
-    </a>
-    <a href="https://www.linkedin.com/in/hemanthchowdarythammineni/" target="_blank" style="margin-left: 15px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="24" />
-    </a>
-    <a href="mailto:thamminenihemanthc17@gmail.com" style="margin-left: 15px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email" width="24" />
-    </a>
-  </div>
-
-</header>
-
-
-<!-- HOME SECTION -->
-<section id="home" class="hero">
-  <div class="hero-container">
-    <div class="hero-left">
-      <p class="hello-text">HELLO!</p>
-      <h1>I'm Hemanth Thammineni</h1>
-      <h2 class="type-text"></h2>
-
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-yellow">Contact Me</a>
       </div>
     </div>
+  </header>
 
-    <div class="hero-img">
-      <div class="profile-pic">
-        <img src="img/profile.jpeg" alt="Hemanth Thammineni">
-      </div>
-    </div>
-  </div>
-</section>
+  <main id="main-content">
 
-	<!-- ABOUT SECTION -->
-  
-   <section id="about" class="about">
-    <h2>About Me</h2>
-    <div class="about-right">
-    
-  <p>
-    I’m Hemanth, a Data Engineer with 3+ years of experience building and optimizing enterprise-scale data pipelines and cloud-native data platforms in regulated environments. 
-    I design end-to-end ETL and ELT workflows using Python and advanced SQL, ingesting data from transactional systems, APIs, and upstream platforms into analytics-ready layers on AWS S3 and PostgreSQL. 
-    My work supports risk, compliance, finance, and analytics teams by delivering reliable, scalable datasets that power dashboards, reporting, and decision-making.
+    <!-- ---------- Home ---------- -->
 
-  <p>
-     I focus heavily on performance, data quality, and production readiness. I’ve built incremental and partitioned batch pipelines processing millions of records per month, reduced pipeline latency and costs through SQL optimization and efficient file formats, and implemented data validation frameworks with schema checks, reconciliation metrics, and audit-ready controls. 
-     My pipelines are containerized with Docker, deployed through CI/CD using GitHub Actions, and instrumented with structured logging, monitoring, and alerting to reduce failures and improve MTTR in production.
-  </p>
-  <p>
-    Recently, I’ve been working closely with risk, compliance, and analytics stakeholders to define data contracts, dimensional models, and canonical schemas aligned with business KPIs, enabling consistent and governed data consumption across teams. 
-    I enjoy translating complex business requirements into clean technical designs, documenting systems clearly, and building data platforms that teams trust. If your team values scalability, data reliability, and disciplined engineering practices, I’d be excited to contribute.
-  </p>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
 
-</div>
-</section>
+        <div>
+          <span class="eyebrow">Hello, I'm</span>
 
+          <h1>Hemanth Chowdary<br>Thammineni</h1>
 
+          <h2>
+            <span id="role-text">Data Engineer</span>
+          </h2>
 
-<!-- EDUCATION SECTION -->
-<section class="education" id="education">
-  <div class="education-container">
-    <h2>Education</h2>
+          <p>
+            Building reliable data pipelines with Matillion ETL/DPC,
+            Snowflake, Python, and SQL. Focused on data quality,
+            performance, and production troubleshooting.
+          </p>
 
-    <!-- Syracuse University -->
-    <div class="edu-card" data-aos="fade-up">
-      <h3>M.S. Applied Data Science</h3>
-      <p class="edu-school">Syracuse University, School of Information Studies</p>
-      <p class="edu-date">Aug 2023 – May 2025</p>
-      <p class="edu-desc">
-        I have completed my Master’s in Applied Data Science at Syracuse University, where I developed strong foundations in data engineering, machine learning, and business analytics.<br>
-        <strong style="color: #F3EAC0;">GPA:</strong> 3.7 / 4.0<br><br>
-        <strong style="color: #F3EAC0;">Relevant Coursework:</strong> Database Management Systems, Data Science Fundamentals, Scripting for Data Analysis, Applied Machine Learning, Quantitative Reasoning, Business Analytics, Data Warehousing, Cloud Management, Big Data Analytics.<br><br>
-        <strong style="color: #F3EAC0;">Course Highlights & Practical Experience:</strong> During my time at Syracuse, I collaborated on multiple team projects involving real-world datasets, implemented full data pipelines using Python, SQL, and dbt Cloud, and leveraged cloud platforms like AWS and Snowflake for scalable analytics. I gained practical experience in visualizing insights using Tableau and Power BI, and applied various machine learning techniques to solve classification and time series problems relevant to finance and energy sectors. These hands-on experiences helped strengthen my problem-solving skills and deepened my understanding of applied data science in enterprise settings.
-      </p>
-    </div>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">Explore Projects</a>
 
-    <!-- VTU -->
-    <div class="edu-card" data-aos="fade-up">
-      <h3>B.E. Computer Science & Engineering</h3>
-      <p class="edu-school">Visvesvaraya Technological University, India</p>
-      <p class="edu-date">Jul 2018 – May 2022</p>
-      <p class="edu-desc">
-        I completed my Bachelor's in Computer Science and Engineering at Visvesvaraya Technological University, where I gained hands-on experience in core software development and AI concepts.<br>
-        <strong style="color: #F3EAC0;">GPA:</strong> 7.01 / 10.0<br><br>
-        <strong style="color: #F3EAC0;">Relevant Coursework:</strong> Object-Oriented Programming, Artificial Intelligence, Data Structures and Algorithms, Internet of Things, Big Data Analysis, Operating Systems, AI & ML, Natural Language Processing.<br><br>
-        <strong style="color: #F3EAC0;">Course Highlights & Practical Experience:</strong> As part of my undergraduate curriculum, I developed multiple academic and capstone projects using Java, Python, and cloud APIs. I explored IoT-based home automation systems, built data mining algorithms from scratch, and led a final-year project that used natural language processing to extract sentiment from product reviews. These projects not only improved my coding skills but also sparked my passion for data-driven problem-solving.
-      </p>
-    </div>
-  </div>
-</section>
+            <a class="btn btn-outline" href="#contact">
+              Contact Me
+            </a>
 
-<section class="education" id="experience">
-  <div class="education-container">
-    <h2>Experience</h2>
-
-    <!-- Capital One -->
-    <div class="exp-card-new" data-aos="fade-up">
-      <h3 class="exp-role">Data Engineer</h3>
-      <p class="exp-meta">PMorgan Chase & Co., USA</p>
-      <p class="exp-dates">Dec 2024 – Present</p>
-      <ul class="exp-points">
-          <li>Designed and implemented enterprise-grade ETL pipelines using Python, SQL, and AWS services, ingesting data from transactional systems, APIs, and upstream platforms into S3 and PostgreSQL analytical layers.</li>
-
-          <li>Built incremental, partitioned batch pipelines processing millions of records per month, reducing full data reload costs by 45% and improving pipeline efficiency and scalability.</li>
-
-          <li>Developed data quality and reconciliation frameworks including schema validation, null checks, record counts, and cross-system comparisons, improving data accuracy and reducing reporting discrepancies by 18%.</li>
-
-          <li>Optimized complex SQL transformations using CTEs, window functions, indexing, and query refactoring, improving analytical query performance by 35% for downstream analytics and reporting teams.</li>
-
-          <li>Partnered with risk, compliance, and analytics stakeholders to define data contracts, business rules, and canonical schemas, ensuring governed and consistent data consumption across teams.</li>
-
-          <li>Automated pipeline deployments, testing, and monitoring using Docker and GitHub Actions, reducing manual deployment effort by 40% and improving release reliability.</li>
-
-          <li>Implemented structured logging, alerting, and monitoring for data pipelines, reducing mean time to resolution (MTTR) for data incidents by 30%.</li>
-      </ul>
-    </div>
-
-    <!-- Hexaware Technologies -->
-    <div class="exp-card-new" data-aos="fade-up">
-      <h3 class="exp-role">Data Engineer</h3>
-      <p class="exp-meta">Hexaware Technologies — India</p>
-      <p class="exp-dates">Jan 2021 – Jul 2023</p>
-      <ul class="exp-points">
-
-  <li>Built and maintained scalable ETL pipelines for structured and semi-structured data (JSON, Parquet, CSV), supporting enterprise analytics, dashboards, and reporting platforms.</li>
-
-  <li>Developed data transformation layers using Python and SQL to convert raw ingestion data into clean, analytics-ready datasets, enabling accurate business intelligence and insights.</li>
-
-  <li>Designed and implemented dimensional data models (fact and dimension tables) aligned with business KPIs, improving analytical query performance by 25%.</li>
-
-  <li>Implemented data validation and quality checks to detect missing, duplicate, and malformed records, reducing failed batch jobs by 22% across client environments.</li>
-
-  <li>Optimized ingestion and transformation workflows through partitioning, efficient file formats, and SQL tuning, reducing end-to-end pipeline runtimes by 30%.</li>
-
-  <li>Collaborated with business analysts and downstream consumers to translate functional requirements into technical data specifications, improving data usability and delivery timelines.</li>
-
-  <li>Authored pipeline documentation, schema definitions, and operational runbooks, accelerating onboarding for new engineers by 30%.</li>
-
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-
-	
-	<!-- PROJECTS SECTION -->
-  <section class="projects" id="projects">
-    <div class="projects-container">
-      <h2 style="font-size: 28px;">Projects</h2>
-  
-      <!-- Project 1 -->
-      <div class="container my-5" >
-        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
-          <div class="row mb-3">
-            <div class="col-12">
-              <h3>NYPD Crime Hotspots Prediction & Emergency Response Optimization</h3>
-              <p class="project-subtitle">Tools: Python, Pandas, Scikit-learn, XGBoost, ARIMA, LSTM, NYC 911 ICAD, NOAA Weather</p>
-            </div>
-          </div>
-  
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <img src="img/p_1.1.png" alt="NYPD Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_1.2.png" alt="NYPD Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_1.3.png" alt="NYPD Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="col-12">
-              <ul>
-                <li>Analyzed 7M+ 911 dispatch records with weather data to forecast crime-prone areas and optimize emergency response.</li>
-                <li>Built Decision Tree, Random Forest, ARIMA, and LSTM models to predict response time and crime patterns.</li>
-                <li>Identified borough trends: Manhattan had 5-min faster responses; assaults had 10% longer delays.</li>
-                <li>Recommended real-time data integration and fairness audits across precincts.</li>
-              </ul>
-              <div class="project-tags mb-2">
-                <span class="tag">Time Series</span>
-                <span class="tag">ML</span>
-                <span class="tag">LSTM</span>
-              </div>
-              <a href="https://github.com/ThammineniHemanthChowdary/NYPD_ResponseTimeAnalysis" class="github-link" target="_blank">🔗 View GitHub Repo</a>
-            </div>
+            <!-- Place your resume PDF beside index.html -->
+            <a
+              class="btn btn-outline"
+              href="Hemanth_Data_Engineer_Resume_Updated.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Resume
+            </a>
           </div>
         </div>
+
+        <div class="portrait">
+          <img
+            src="img/profile.jpeg"
+            alt="Portrait of Hemanth Chowdary Thammineni"
+            loading="lazy">
+        </div>
+
       </div>
-  
-      <!-- Project 2 -->
-      <div class="container my-5">
-        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
-          <div class="row mb-3">
-            <div class="col-12">
-              <h3>What, How, New York Drives? – DMV & EV Data Visualization</h3>
-              <p class="project-subtitle">Tools: Tableau, Pandas, Mapbox, NY DMV, Crash & EV Infrastructure Data</p>
-            </div>
-          </div>
-  
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <img src="img/p_2.1.png" alt="DMV Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_2.2.png" alt="DMV Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_2.3.png" alt="DMV Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="col-12">
-              <ul>
-                <li>Visualized 8.8M DMV transactions and 3.26M crash records to uncover car trends, crash risks, and EV adoption.</li>
-                <li>Built 3 interactive Tableau dashboards showing vehicle usage, gender-wise crash risks, and EV growth.</li>
-                <li>Found Sunday and afternoon crashes highest; Tesla most popular EV; NYC leads EV infrastructure.</li>
-                <li>Proposed machine learning for crash prediction and sustainable transport planning.</li>
-              </ul>
-              <div class="project-tags mb-2">
-                <span class="tag">Visualization</span>
-                <span class="tag">Geospatial</span>
-                <span class="tag">Tableau</span>
-              </div>
-              <a href="https://github.com/ThammineniHemanthChowdary/What-How-New-York-Drives-" class="github-link" target="_blank">🔗 View GitHub Repo</a>
-            </div>
-          </div>
+    </section>
+
+    <!-- ---------- About ---------- -->
+
+    <section id="about">
+      <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card about-card">
+
+          <p>
+            I'm a Data Engineer with 1+ years of experience
+            developing, migrating, and supporting enterprise
+            ETL/ELT pipelines for a healthcare payer client.
+            My core stack includes
+            <strong>Matillion ETL, Matillion Data Productivity
+            Cloud (DPC), Snowflake, Python, and SQL</strong>.
+          </p>
+
+          <p>
+            At CloudEQS, supporting Delta Dental of California,
+            I contribute to Matillion ETL-to-DPC migration,
+            develop Snowflake transformations, and use Python
+            and SQL for source-to-target reconciliation and
+            quality checks. My work includes monitoring job
+            control tables and execution logs, investigating
+            production issues, and improving workflow reliability.
+          </p>
+
+          <p>
+            I also have academic project experience with data
+            analytics and machine learning, including energy
+            demand forecasting, financial time series, and
+            large-scale New York public datasets. I'm interested
+            in building dependable data platforms and collaborating
+            with teams to turn raw information into trustworthy
+            analytics.
+          </p>
+
         </div>
       </div>
-  
-      <!-- Project 3 -->
-      <div class="container my-5">
-        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
-          <div class="row mb-3">
-            <div class="col-12">
-              <h3>Energy Consumption Forecasting for Peak Demand Optimization</h3>
-              <p class="project-subtitle">Tools: R, Python, XGBoost, Shiny, ggplot2, SHAP, SC/NC Utility Data</p>
-            </div>
+    </section>
+
+    <!-- ---------- Technical Skills ---------- -->
+
+    <section id="skills">
+      <div class="container">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+
+          <div class="card skill-card">
+            <h3>Programming &amp; SQL</h3>
+            <p>
+              Python (Pandas, NumPy, Polars),
+              SQL (joins, CTEs, window functions),
+              Bash, Git
+            </p>
           </div>
-  
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <img src="img/p_3.1.png" alt="Energy Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_3.2.png" alt="Energy Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_3.3.png" alt="Energy Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
+
+          <div class="card skill-card">
+            <h3>Production Data Engineering</h3>
+            <p>
+              Matillion ETL, Matillion DPC, Snowflake,
+              ETL/ELT, pipeline migration, batch orchestration,
+              query optimization, job control tables
+            </p>
           </div>
-  
-          <div class="row">
-            <div class="col-12">
-              <ul>
-                <li>Forecasted energy usage across SC/NC using 175K+ rows of hourly data, weather, and building profiles.</li>
-                <li>XGBoost (tuned) achieved 88.58% R²; SHAP explained temperature and insulation as top drivers.</li>
-                <li>Built a Shiny dashboard to visualize county-wise usage and simulate demand rise under 5°F temp increase.</li>
-                <li>Suggested demand response strategies like smart pricing and retrofitting to reduce future peak load.</li>
-              </ul>
-              <div class="project-tags mb-2">
-                <span class="tag">Regression</span>
-                <span class="tag">Energy</span>
+
+          <div class="card skill-card">
+            <h3>Data Quality &amp; Reporting</h3>
+            <p>
+              Source-to-target reconciliation, schema validation,
+              null and duplicate checks, pipeline monitoring,
+              root-cause analysis, Tableau, PostgreSQL
+            </p>
+          </div>
+
+          <div class="card skill-card exposure">
+            <h3>Coursework &amp; Project Exposure</h3>
+            <p>
+              Spark/PySpark, scikit-learn, XGBoost, SHAP,
+              MLflow, Docker, dbt, Airflow, Azure Data Factory,
+              AWS S3, BigQuery, dimensional modeling
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Education ---------- -->
+
+    <section id="education">
+      <div class="container">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-list">
+
+          <article class="card edu-card">
+
+            <h3>
+              Master of Science in Applied Data Science
+            </h3>
+
+            <span class="meta">
+              Syracuse University · Aug 2023 – May 2025
+            </span>
+
+            <p>
+              <strong>Relevant Coursework:</strong>
+              Artificial Intelligence &amp; Machine Learning,
+              Big Data Analytics, Data Warehousing,
+              Cloud Management, Database Management Systems,
+              Quantitative Reasoning for Data Science,
+              and Business Analytics.
+            </p>
+
+          </article>
+
+          <article class="card edu-card">
+
+            <h3>
+              Bachelor of Engineering in Computer Science
+              &amp; Engineering
+            </h3>
+
+            <span class="meta">
+              Visvesvaraya Technological University, India ·
+              Jul 2018 – May 2022
+            </span>
+
+            <p>
+              Undergraduate studies in computer science,
+              programming, data structures, algorithms,
+              and software development.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Work Experience ---------- -->
+
+    <section id="experience">
+      <div class="container">
+
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="exp-list">
+
+          <!-- CloudEQS -->
+
+          <article class="card exp-card">
+
+            <h3>Data Engineer</h3>
+
+            <p class="client">
+              CloudEQS LLC · Client: Delta Dental of California
+            </p>
+
+            <span class="meta">Nov 2025 – Present</span>
+
+            <ul>
+
+              <li>
+                Developed and optimized Matillion ETL/DPC
+                workflows and Snowflake SQL transformations
+                supporting enterprise healthcare payer data
+                processing; improved pipeline performance
+                by approximately 25%.
+              </li>
+
+              <li>
+                Contributed to migration of Matillion ETL jobs
+                to DPC across development, QA, and production;
+                refactored components and verified source-to-target
+                consistency through reconciliation checks.
+              </li>
+
+              <li>
+                Diagnosed a production pipeline failure caused
+                by Query to Grid capacity limits; replaced
+                the component with a Table Iterator, tested
+                approximately 50,000 records in non-production,
+                and deployed the fix within 3–4 hours.
+              </li>
+
+              <li>
+                Used Python and SQL to automate record-count,
+                null, duplicate, and schema validation;
+                investigated failures using Matillion execution
+                logs and Snowflake job control tables.
+              </li>
+
+              <li>
+                Built reusable Matillion templates and
+                standardized data-validation workflows,
+                reducing repetitive engineering effort
+                by more than 20 hours per month.
+              </li>
+
+            </ul>
+
+          </article>
+
+          <!-- Syracuse University -->
+
+          <article class="card exp-card">
+
+            <h3>Research Analyst</h3>
+
+            <p class="client">
+              Syracuse University · Syracuse, NY
+            </p>
+
+            <span class="meta">
+              Jun 2025 – Oct 2025
+            </span>
+
+            <ul>
+
+              <li>
+                Converted exploratory notebooks into reusable,
+                parameterized Python (Pandas, NumPy, Polars)
+                and SQL workflows to process and transform
+                multiple datasets consistently.
+              </li>
+
+              <li>
+                Automated missing-value, outlier, and
+                schema-validation checks, identifying
+                data-quality exceptions before downstream
+                analysis and reducing repetitive manual reviews.
+              </li>
+
+              <li>
+                Developed reproducible preprocessing and
+                reporting datasets for Tableau-based analytics;
+                documented transformations and experiment
+                configurations for repeatable stakeholder reviews.
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Academic Projects ---------- -->
+    <!-- Keep your existing img/ folder and filenames -->
+
+    <section id="projects">
+      <div class="container">
+
+        <h2 class="section-title">Academic Projects</h2>
+
+        <p class="section-intro">
+          Selected academic work across machine learning,
+          forecasting, data processing, and business intelligence.
+          View the GitHub repositories for implementation details.
+        </p>
+
+        <div class="project-list">
+
+          <!-- Project 1: Energy -->
+
+          <article class="card project-card">
+
+            <h3>Energy Demand Forecasting Pipeline</h3>
+
+            <p class="project-subtitle">
+              Python · XGBoost · SHAP · Shiny · Time Series
+            </p>
+
+            <div class="gallery">
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_3.1.png"
+                  alt="Energy project visual 1"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_3.2.png"
+                  alt="Energy project visual 2"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_3.3.png"
+                  alt="Energy project visual 3"
+                  loading="lazy">
+              </div>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Processed <strong>176,948 observations</strong>
+                from energy-usage, household, and weather
+                datasets to support peak-demand forecasting.
+              </li>
+
+              <li>
+                Used feature engineering and tuned
+                <strong>XGBoost</strong>, achieving
+                <strong>R² = 0.8858 (88.58%)</strong>;
+                applied SHAP to explain key demand drivers.
+              </li>
+
+              <li>
+                Supported an interactive Shiny application
+                for county-level demand visualization
+                and scenario analysis.
+              </li>
+
+            </ul>
+
+            <div class="project-footer">
+
+              <div>
+                <span class="tag">Forecasting</span>
+                <span class="tag">XGBoost</span>
                 <span class="tag">SHAP</span>
               </div>
-              <a href="https://github.com/ThammineniHemanthChowdary/Optimizing-Electricity-Demand-for-eSC" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+
+              <a
+                class="github-link"
+                href="https://github.com/ThammineniHemanthChowdary/Optimizing-Electricity-Demand-for-eSC"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                View GitHub Repository
+              </a>
+
             </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Project 4 -->
-      <div class="container my-5">
-        <div class="project-card-custom p-4" data-aos="fade-up" style="background-color: #2B4560;">
-          <div class="row mb-3">
-            <div class="col-12">
-              <h3>Apple Stock Price Prediction Using Historical & Market Data</h3>
-              <p class="project-subtitle">Tools: PySpark, Scikit-learn, Yahoo Finance API, VIX, Bond Yield</p>
+
+          </article>
+
+          <!-- Project 2: Stock Forecasting -->
+
+          <article class="card project-card">
+
+            <h3>Apple Stock Price Forecasting</h3>
+
+            <p class="project-subtitle">
+              PySpark · Python · Machine Learning · Financial Data
+            </p>
+
+            <div class="gallery">
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_4.1.png"
+                  alt="Stock forecasting visual 1"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_4.2.png"
+                  alt="Stock forecasting visual 2"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_4.3.jpg"
+                  alt="Stock forecasting visual 3"
+                  loading="lazy">
+              </div>
+
             </div>
-          </div>
-  
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <img src="img/p_4.1.png" alt="Stock Project Image 1" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_4.2.png" alt="Stock Project Image 2" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-            <div class="col-md-4">
-              <img src="img/p_4.3.jpg" alt="Stock Project Image 3" class="img-fluid rounded shadow-sm" style="width: 100%; object-fit: contain; aspect-ratio: 4 / 3;">
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="col-12">
-              <ul>
-                <li>Built ML pipeline to forecast Apple’s stock using 10+ years of price and macroeconomic data.</li>
-                <li>Engineered features like daily returns, lags, weekday encodings; addressed non-stationarity via diffing.</li>
-                <li>Best RMSE: 0.384 (Linear Regression); captured volatility patterns, especially 2022 downward trend.</li>
-                <li>Insights aid individual and institutional investors for risk forecasting and strategic decisions.</li>
-              </ul>
-              <div class="project-tags mb-2">
-                <span class="tag">Stock</span>
+
+            <ul>
+
+              <li>
+                Built a PySpark feature-processing workflow
+                using <strong>2012–2023</strong> Apple price
+                data and macroeconomic indicators,
+                including VIX and bond yields.
+              </li>
+
+              <li>
+                Engineered lag, rolling-statistic, and
+                price-difference features; compared
+                Linear Regression, Random Forest,
+                Decision Tree, and Gradient Boosting models.
+              </li>
+
+              <li>
+                Evaluated forecasts using RMSE and SMAPE;
+                project materials report a best RMSE
+                of approximately 0.384.
+              </li>
+
+            </ul>
+
+            <div class="project-footer">
+
+              <div>
                 <span class="tag">PySpark</span>
+                <span class="tag">Time Series</span>
                 <span class="tag">Finance</span>
               </div>
-              <a href="https://github.com/ThammineniHemanthChowdary/Apple-stock-prediction-" class="github-link" target="_blank">🔗 View GitHub Repo</a>
+
+              <a
+                class="github-link"
+                href="https://github.com/ThammineniHemanthChowdary/Apple-stock-prediction-"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                View GitHub Repository
+              </a>
+
             </div>
-          </div>
+
+          </article>
+
+          <!-- Project 3: New York Transportation -->
+
+          <article class="card project-card">
+
+            <h3>
+              New York Transportation Analytics Dashboard
+            </h3>
+
+            <p class="project-subtitle">
+              Tableau · SQL · Data Visualization
+            </p>
+
+            <div class="gallery">
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_2.1.png"
+                  alt="Transportation dashboard visual 1"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_2.2.png"
+                  alt="Transportation dashboard visual 2"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_2.3.png"
+                  alt="Transportation dashboard visual 3"
+                  loading="lazy">
+              </div>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Analyzed <strong>8.8 million</strong>
+                New York DMV transactions and
+                <strong>3.26 million</strong> crash records,
+                alongside EV charging station data.
+              </li>
+
+              <li>
+                Built interactive Tableau dashboards covering
+                vehicle registration trends, road safety patterns,
+                and EV adoption across New York State.
+              </li>
+
+            </ul>
+
+            <div class="project-footer">
+
+              <div>
+                <span class="tag">Tableau</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">EV Adoption</span>
+              </div>
+
+              <a
+                class="github-link"
+                href="https://github.com/ThammineniHemanthChowdary/What-How-New-York-Drives-"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                View GitHub Repository
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- Project 4: NYPD Analysis -->
+
+          <article class="card project-card">
+
+            <h3>
+              NYPD Response Time and Crime Hotspot Analysis
+            </h3>
+
+            <p class="project-subtitle">
+              Python · Decision Trees · Random Forest · ARIMA
+            </p>
+
+            <div class="gallery">
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_1.1.png"
+                  alt="NYPD analysis visual 1"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_1.2.png"
+                  alt="NYPD analysis visual 2"
+                  loading="lazy">
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="img/p_1.3.png"
+                  alt="NYPD analysis visual 3"
+                  loading="lazy">
+              </div>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Explored <strong>7.05 million</strong>
+                emergency-call records and analyzed
+                approximately <strong>450,000</strong>
+                focused incidents, incorporating weather
+                and time features.
+              </li>
+
+              <li>
+                Evaluated Decision Tree, Random Forest,
+                and ARIMA models for response-time and
+                hotspot analysis; explored LSTM approaches
+                as additional research.
+              </li>
+
+              <li>
+                Examined response-time differences
+                by incident category, borough,
+                and weather conditions.
+              </li>
+
+            </ul>
+
+            <div class="project-footer">
+
+              <div>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Public Safety</span>
+                <span class="tag">Time Series</span>
+              </div>
+
+              <a
+                class="github-link"
+                href="https://github.com/ThammineniHemanthChowdary/NYPD_ResponseTimeAnalysis"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                View GitHub Repository
+              </a>
+
+            </div>
+
+          </article>
+
         </div>
       </div>
-  
-    </div>
-  </section>
-  
+    </section>
 
-<!-- AOS animation script -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<!-- CERTIFICATIONS SECTION -->
-<section class="certifications" id="certifications">
-  <div class="certifications-container">
-    <h2>Certifications</h2>
+    <!-- ---------- Certifications ---------- -->
 
-    <!-- Certificate 1 -->
-    <div class="cert-card" data-aos="fade-up">
-  <h3>Snowflake Hands-On Essentials: Data Warehousing Workshop</h3>
-  <p><strong>Issued by:</strong> Snowflake | <strong>Date:</strong> Feb 2025</p>
-  <p>This interactive workshop proves your skills in Snowflake SQL, databases, external stages, and compute warehouses. You demonstrated data loading, transformation, and querying using Snowflake best practices.</p>
-  
-  <span class="cert-tag">Snowflake</span>
-  <span class="cert-tag">SQL</span>
-  <span class="cert-tag">Cloud Warehousing</span>
+    <section id="certifications">
+      <div class="container">
 
-  
-  </a>
-</div>
+        <h2 class="section-title">Certifications</h2>
 
+        <div class="cert-grid">
 
-    <!-- Certificate 2 -->
-<div class="cert-card" data-aos="fade-up">
-  <h3>Career Essentials in Data Analysis</h3>
-  <p><strong>Issued by:</strong> Microsoft & LinkedIn | <strong>Date:</strong> Jun 2024</p>
-  <p>Covered the full lifecycle of data analysis, including Excel, Power BI, and foundational analytics concepts. Helped strengthen your skills in extracting, visualizing, and communicating data insights.</p>
-  
-  <span class="cert-tag">Data Analytics</span>
-  <span class="cert-tag">Visualization</span>
+          <article class="card cert-card">
 
-  </a>
-</div>
+            <h3>
+              Snowflake Hands-On Essentials:
+              Data Warehousing
+            </h3>
 
+            <p class="meta">
+              Snowflake · 2025
+            </p>
 
-    <!-- Certificate 3 -->
-    <div class="cert-card" data-aos="fade-up">
-      <h3>Data Science and Machine Learning</h3>
-      <p><strong>Issued by:</strong> Udemy | <strong>Date:</strong> May 2023</p>
-      <p>Completed hands-on projects covering supervised/unsupervised learning, regression models, and tools like pandas, numpy, and scikit-learn. Shows commitment to advancing your machine learning expertise.</p>
-      <span class="cert-tag">ML</span>
-      <span class="cert-tag">Python</span>
-      <span class="cert-tag">Scikit-learn</span>
-    </div>
+            <p>
+              Hands-on training in Snowflake SQL,
+              cloud data warehousing, stages,
+              data loading, and querying.
+            </p>
 
-    <!-- Certificate 4 -->
-    <div class="cert-card" data-aos="fade-up">
-      <h3>Machine Learning Certification</h3>
-      <p><strong>Issued by:</strong> Prinston Smart Engineers | <strong>Date:</strong> Sep 2021</p>
-      <p>Introduced core machine learning principles with practical exposure. Helped build foundational understanding of models and evaluation methods.</p>
-      <span class="cert-tag">Machine Learning</span>
-    </div>
+            <div>
+              <span class="tag">Snowflake</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Data Warehousing</span>
+            </div>
 
-    <!-- Certificate 5 -->
-    <div class="cert-card" data-aos="fade-up">
-      <h3>Web Application Development</h3>
-      <p><strong>Issued by:</strong> Manac Infotech Pvt. Ltd. | <strong>Date:</strong> Jun 2021</p>
-      <p>Explored basic front-end and back-end development tools, including HTML, CSS, JS, and database integration. Demonstrates your flexibility in full-stack foundations.</p>
-      <span class="cert-tag">Web Dev</span>
-      <span class="cert-tag">Frontend</span>
-      <span class="cert-tag">JavaScript</span>
-    </div>
-  </div>
-</section>
+          </article>
 
-	<!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+          <article class="card cert-card">
 
-  <div class="contact-box">
-    <a href="mailto:thamminenihemanthc17@gmail.com" class="contact-item" title="Email">
-      <i class="fas fa-envelope"></i>
-      <span>Email</span>
-    </a>
-    <a href="tel:+14752211737" class="contact-item" title="Phone">
-      <i class="fas fa-phone-alt"></i>
-      <span>Phone</span>
-    </a>
-    <a href="https://github.com/ThammineniHemanthChowdary" target="_blank" class="contact-item" title="GitHub">
-      <i class="fab fa-github"></i>
-      <span>GitHub</span>
-    </a>
-    <a href="https://www.linkedin.com/in/hemanthchowdarythammineni/" target="_blank" class="contact-item" title="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-  </div>
-</section>
+            <h3>
+              Career Essentials in Data Analysis
+            </h3>
 
+            <p class="meta">
+              Microsoft &amp; LinkedIn · 2024
+            </p>
 
+            <p>
+              Training in foundational data analysis,
+              visualization, and presenting findings
+              to stakeholders.
+            </p>
 
+            <div>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Visualization</span>
+            </div>
 
-  </body>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Contact ---------- -->
+
+    <section id="contact">
+      <div class="container">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p class="section-intro">
+          Interested in collaborating or discussing
+          Data Engineer opportunities? Feel free
+          to reach out.
+        </p>
+
+        <div class="card contact-card">
+
+          <div class="contact-grid">
+
+            <a
+              class="contact-link"
+              href="mailto:hemanththammineni17@gmail.com">
+
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+
+              hemanththammineni17@gmail.com
+
+            </a>
+
+            <a
+              class="contact-link"
+              href="tel:+13152549515">
+
+              <i class="fas fa-phone" aria-hidden="true"></i>
+
+              +1 (315) 254-9515
+
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://github.com/ThammineniHemanthChowdary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="fab fa-github" aria-hidden="true"></i>
+
+              github.com/ThammineniHemanthChowdary
+
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/hemanth-thammineni-56375341a/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+
+              linkedin.com/in/hemanth-thammineni-56375341a/
+
+            </a>
+
+          </div>
+
+          <p style="text-align:center; margin:18px 0 0; color:var(--cream);">
+            Syracuse, NY · Open to Relocation
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ---------- Footer ---------- -->
+
+  <footer class="footer">
+    © <span id="year">2026</span>
+    Hemanth Chowdary Thammineni.
+    All rights reserved.
+  </footer>
+
+  <!-- ---------- JavaScript ---------- -->
+
+  <script>
+
+    // Rotate professional titles.
+
+    const roles = [
+      "Data Engineer",
+      "Snowflake & ETL/ELT Developer",
+      "Python & SQL Practitioner"
+    ];
+
+    const roleNode = document.getElementById("role-text");
+
+    if (
+      roleNode &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+
+      let roleIndex = 0;
+
+      window.setInterval(() => {
+
+        roleIndex = (roleIndex + 1) % roles.length;
+        roleNode.textContent = roles[roleIndex];
+
+      }, 3000);
+
+    }
+
+    // Update footer year automatically.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Show placeholders for missing local images.
+
+    document.querySelectorAll(
+      ".portrait img, .gallery-item img"
+    ).forEach((img) => {
+
+      const missing = () => {
+
+        img.classList.add("is-missing");
+
+        if (img.parentElement) {
+          img.parentElement.classList.add("is-missing");
+        }
+
+      };
+
+      img.addEventListener("error", missing);
+
+      if (img.complete && img.naturalWidth === 0) {
+        missing();
+      }
+
+    });
+
+  </script>
+
+</body>
 </html>
-
